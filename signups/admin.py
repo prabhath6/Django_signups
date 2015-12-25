@@ -8,3 +8,10 @@ class SignUpAdmin(admin.ModelAdmin):
         model = SignUp
 
 admin.site.register(SignUp, SignUpAdmin)
+
+#
+# class NamesAdmin(admin.ModelAdmin):
+#     class Meta:
+#         model = UserNames
+#
+# admin.site.register(UserNames, NamesAdmin)

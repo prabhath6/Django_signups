@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django_signup import settings
+from signups import views
+from django.conf.urls.static import static
 
 urlpatterns = [
+    url(r'^$', views.home, name="home"),
     url(r'^admin/', admin.site.urls),
+    url(r'^thank-you', views.thankyou, name="thankyou"),
+    url(r'^about-us', views.aboutus, name="aboutus"),
+    # url(r'^name/$', views.name, name="name"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -15,3 +15,10 @@ class SignUp(models.Model):
 
     def __unicode__(self):
         return smart_unicode(self.first_name)
+
+#
+# class UserNames(models.Model):
+#     name = models.CharField(max_length=120, null=True, blank=True)
+#
+#     def __unicode__(self):
+#         return smart_unicode(self.name)

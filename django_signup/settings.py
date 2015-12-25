@@ -56,7 +56,7 @@ ROOT_URLCONF = 'django_signup.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["/Users/prabhath/PycharmProjects/django_signup/templates/", ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,6 +125,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
-)
+# css and js (static)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static_in_pro', 'our_static'), )
+
+# static_only
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_pro', 'static_root')
+
+MEDIA_URL = '/media/'
+
+# images and other stuff (media)
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_env', 'media_root')
+
+# TEMPLATE_DIRS = (
+#     os.path.join(BASE_DIR,  'templates'),
+# )
