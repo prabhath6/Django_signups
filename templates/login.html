@@ -1,0 +1,27 @@
+{%  extends "base.html" %}
+{% load staticfiles %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block content %}
+
+    <link href="{% static 'css/login_bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/login_ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+
+    <hr>
+
+    <div class="container">
+
+      <form class="form-signin" method="POST", action="/auth/">
+        <h2 class="form-signin-heading" align="center"> Sign In </h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" method="POST" action="" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" method="POST" action="" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div>
+{% endblock %}

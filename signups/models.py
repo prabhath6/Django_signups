@@ -4,6 +4,7 @@ from django.db import models
 from django.utils.encoding import smart_unicode
 
 
+
 # Create your models here.
 class SignUp(models.Model):
 
@@ -22,3 +23,16 @@ class SignUp(models.Model):
 #
 #     def __unicode__(self):
 #         return smart_unicode(self.name)
+
+
+# Create Login
+class CreateLogin(models.Model):
+
+    first_name = models.CharField(max_length=120, null=True, blank=True)
+    last_name = models.CharField(max_length=120, null=True, blank=True)
+    email = models.EmailField()
+    password = models.CharField(max_length=8, null=False, blank=False)
+
+    def __unicode__(self):
+        return smart_unicode(self.first_name)
+

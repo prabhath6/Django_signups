@@ -1,0 +1,62 @@
+{%  extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<hr xmlns="http://www.w3.org/1999/html">
+    <h2 class="fieldWrapper_" >Sign Up</h2>
+<div class="col-sm-3">
+
+            <form method="POST", action="">
+                {% csrf_token %}
+                    <br>
+                    <div class="fieldWrapper", align="center">
+                        <label class="test" for="{{ form.first_name.id_for_label }}" >First Name </label>
+                        <input  placeholder="First Name"  /></p>
+                    </div>
+
+                    <br>
+                    <div class="fieldWrapper", align="center">
+                        <label class="test" for="{{ form.last_name.id_for_label }}">Last Name</label>
+                        <input  placeholder="Last Name"  /></p>
+                    </div>
+
+                    <br>
+                    <div class="fieldWrapper", align="center">
+                        <label class="test_" for="{{ form.email.id_for_label }}">Email</label>
+{#                        {{ form.email }}#}
+                        <input  type="Email"  placeholder="Email"  /></p>
+                    </div>
+
+                    <br>
+                    <div class="fieldWrapper", align="center">
+                        <label class="test" for="{{ form.password.id_for_label }} ">Password</label>
+                        <input  type="password"  placeholder="Password"  /></p>
+                    </div>
+                <br>
+                <input type = "submit" type="button" class="btn btn-success btn-block">
+            </form>
+</div>
+
+{% endblock %}
+
+{#    <div class="fieldWrapper">#}
+{#    {{ form.subject.errors }}#}
+{#    <label for="{{ form.subject.id_for_label }}">Email subject:</label>#}
+{#    {{ form.subject }}#}
+{#</div>#}
+{#<div class="fieldWrapper">#}
+{#    {{ form.message.errors }}#}
+{#    <label for="{{ form.message.id_for_label }}">Your message:</label>#}
+{#    {{ form.message }}#}
+{#</div>#}
+{#<div class="fieldWrapper">#}
+{#    {{ form.sender.errors }}#}
+{#    <label for="{{ form.sender.id_for_label }}">Your email address:</label>#}
+{#    {{ form.sender }}#}
+{#</div>#}
+{#<div class="fieldWrapper">#}
+{#    {{ form.cc_myself.errors }}#}
+{#    <label for="{{ form.cc_myself.id_for_label }}">CC yourself?</label>#}
+{#    {{ form.cc_myself }}#}
+{#</div>#}

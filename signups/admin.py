@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SignUp
+from .models import SignUp, CreateLogin
 
 
 # Register your models here.
@@ -15,3 +15,10 @@ admin.site.register(SignUp, SignUpAdmin)
 #         model = UserNames
 #
 # admin.site.register(UserNames, NamesAdmin)
+
+
+class CreateLoginAdmin(admin.ModelAdmin):
+    class Meta:
+        model = CreateLogin
+
+admin.site.register(CreateLogin, CreateLoginAdmin)
